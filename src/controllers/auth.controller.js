@@ -49,6 +49,7 @@ const registrationHandler = async (req, res, next) => {
 const loginHandler = async (req, res, next) => {
     try {
         const user = await validate_LoginCredentials(req)
+        const { emailID, password } = req.body
         if(user){
             const accessToken = await generateToken(user._id , "1d" , process.env.JWT_SECRET)
             return res.json({

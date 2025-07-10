@@ -9,7 +9,6 @@ const generateUniqueCode = async () => {
     // Importing the package only at runtime
     const { customAlphabet } = await import('nanoid');
     nanoidGenerator = customAlphabet('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789', 7);
-    console.log("creating nanoidGenerator")
   }
 
   let code;

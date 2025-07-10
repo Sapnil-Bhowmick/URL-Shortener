@@ -10,6 +10,7 @@ const { createRateLimiter } = require("../utils/rateLimiter.js")
 
 
 authRouter.post("/register" , createRateLimiter({ windowMs: 10 , max: 5 }) , trimRequest.all , registrationHandler)
+
 authRouter.post("/login" , createRateLimiter({ windowMs: 1 , max: 5 }) , trimRequest.all , loginHandler)
 
 

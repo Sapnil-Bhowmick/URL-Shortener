@@ -30,8 +30,6 @@ const validate_RegistrationCredentials = (req) => {
 const validate_LoginCredentials = async(req) => {
     const { emailID, password } = req.body
 
-    console.log(emailID, password)
-
     if (!emailID || !password) {
         throw createHTTPError.BadRequest("Please fill in the required fields")
     }

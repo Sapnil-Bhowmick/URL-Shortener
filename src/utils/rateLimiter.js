@@ -2,7 +2,6 @@ const rateLimit = require('express-rate-limit');
 const createHttpError = require('http-errors');
 
 const createRateLimiter = ({ windowMs, max }) => {
-    console.log("rate limer -> ", { windowMs, max })
     return rateLimit({
         // In mins
         windowMs: windowMs * 60 * 1000,

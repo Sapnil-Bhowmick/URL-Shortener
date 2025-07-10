@@ -6,7 +6,10 @@ const mongoSanitize = require('express-mongo-sanitize');
 const cors = require("cors")
 const createHTTPError = require("http-errors")
 
-const router = require("./routes/index.js")
+const router = require("./routes/index.js");
+
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require("../swagger-output.json")
 
 
 
@@ -20,7 +23,9 @@ const app = express()
 app.use(express.json());
 
 //& CORS
-app.use("/", cors())
+app.use(cors());
+
+app.options('*', cors());
 
 //& Helmet
 app.use(helmet())
@@ -38,7 +43,8 @@ if (process.env.NODE_ENV !== "production") {
 // * Applying Routes 
 app.use("/" , router)
 
-
+// * Serve Swagger Doc UI
+app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 //! ----------------- Handling HTTP errors -----------------
 

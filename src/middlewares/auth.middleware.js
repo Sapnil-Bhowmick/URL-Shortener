@@ -15,7 +15,7 @@ const userAuth = async (req, res, next) => {
 
         const decoded_tokenPayload = await VerifyToken(accessToken , process.env.JWT_SECRET)
         if(!decoded_tokenPayload){
-            console.log("In decoded")
+            // console.log("In decoded")
             throw createHTTPError.Unauthorized("Invalid Signature")
         }
 
