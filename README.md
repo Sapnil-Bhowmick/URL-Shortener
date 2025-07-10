@@ -21,3 +21,7 @@
 
 
 ## Video Link
+
+## Bonus Requirements (Completed)
+   - Authentication & API Token Management :  I have used bcrypt for hashing passwords and jsonwebtoken for generationg JWT tokens
+   - API Rate Limiting : I have used express-rate-limit for preventing the overuse of API's. Each api is rate limited differently.
