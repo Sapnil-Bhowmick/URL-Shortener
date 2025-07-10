@@ -2,11 +2,11 @@ const express = require("express")
 const analyticsRouter = express.Router()
 
 const { URLAnalyticsHandler } = require("../controllers/analytics.controller")
+const { userAuth } = require("../middlewares/auth.middleware")
 
 
 
-
-analyticsRouter.get("/:shortCode" , URLAnalyticsHandler)
+analyticsRouter.get("/:shortCode" , userAuth , URLAnalyticsHandler)
 
 
 

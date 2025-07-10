@@ -9,9 +9,8 @@ const { generateUniqueCode } = require('../utils/generateShortCode.util.js');
 
 const shortenURLHandler = async (req, res, next) => {
     try {
-        console.log(req.body)
-
         const { url, customCode } = req.body
+        const {userId} = req.user
 
         // Url -> Required field Validation check
         if (!url) {
@@ -37,7 +36,8 @@ const shortenURLHandler = async (req, res, next) => {
 
         let newURL = await URL.create({
             originalUrl: url,
-            shortCode
+            shortCode,
+            userID: userId
         })
 
         if (newURL) {

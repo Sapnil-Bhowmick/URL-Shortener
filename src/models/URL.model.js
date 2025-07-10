@@ -3,7 +3,7 @@ const mongoose = require("mongoose")
 const urlSchema = new mongoose.Schema({
     originalUrl: {
         type: String,
-        required: [true , "Original URL is required."]
+        required: [true, "Original URL is required."]
     },
     shortCode: {
         type: String,
@@ -18,6 +18,12 @@ const urlSchema = new mongoose.Schema({
         type: Number,
         default: 0
     },
+
+    userID: {
+        type: mongoose.Schema.Types.ObjectId,
+        required: [true, 'User ID is required to create a shortened URL'],
+        ref: 'User'
+    }
 });
 
 
