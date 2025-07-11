@@ -22,6 +22,7 @@
    - While trying out api from here : In the authorization header field ->  Type Bearer [token] because my backend will receive the token from authorization header by splitting it from the whitespace
 
 ## Video Link
+   - https://www.loom.com/share/3c4b3d07a1254cbcb8c0586acfd278a9?sid=2c9dcbbf-2bbc-4e35-8400-f3dcc54b5257
 
 ## Bonus Requirements (Completed)
    - Authentication & API Token Management :  I have used bcrypt for hashing passwords and jsonwebtoken for generationg JWT tokens
