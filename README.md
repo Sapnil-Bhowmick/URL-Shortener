@@ -7,8 +7,8 @@
    - npm install : To install the required node modules
    - npm run dev : To run aplication in Development mode using nodemon. This will also generate the swagger-output.json file automatically.
 
-## Deployed URL
-
+## Deployed URL (Deployed on Render)
+   - https://url-shortener-service-a226.onrender.com
 
 ## API Endpoints
    - /auth/register :  Registering a new user. 
@@ -18,7 +18,7 @@
    - /API/stats/:shortCode : To view the stats corresponding to the URL related to this shortCode. Here, it is just the no of clicks which tells how many times the user clicked on the short URL.
 
 ## Swagger Documentation
-
+   - https://url-shortener-service-a226.onrender.com/docs/
 
 ## Video Link
 
