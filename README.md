@@ -9,6 +9,7 @@
 
 ## Deployed URL (Deployed on Render)
    - https://url-shortener-service-a226.onrender.com
+   - Note: Free tier of render sometime takes time, so response may be delayed sometime
 
 ## API Endpoints
    - /auth/register :  Registering a new user. 
