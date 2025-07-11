@@ -27,7 +27,7 @@
 ## Bonus Requirements (Completed)
    - Authentication & API Token Management :  I have used bcrypt for hashing passwords and jsonwebtoken for generationg JWT tokens
       - API Rate Limiting : I have used express-rate-limit for preventing the overuse of API's. Each api is rate limited differently.
-      - Protect the /api/shorten and /api/stats/:shortCode endpoints. Only authenticated users should be able to access them by providing the token in an Authorization header.
+      - Protect the /api/shorten and /API/stats/:shortCode endpoints. Only authenticated users should be able to access them by providing the token in an Authorization header.
       - Associate created URLs with the user who created them. -> Done in URL.model.js by referencing userID
       - 
    - API Rate Limiting : I have used express-rate-limit for preventing the overuse of API's. Each api is rate limited differently.
