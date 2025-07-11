@@ -19,6 +19,7 @@
 
 ## Swagger Documentation
    - https://url-shortener-service-a226.onrender.com/docs/
+   - While trying out api from here : In the authorization header field ->  Type Bearer [token] because my backend will receive the token from authorization header by splitting it from the whitespace
 
 ## Video Link
 
@@ -31,3 +32,9 @@
    - API Rate Limiting : I have used express-rate-limit for preventing the overuse of API's. Each api is rate limited differently.
 
   
+## A Note 
+   - /r/:shortCode :
+      - Will not work from swagger UI docs since Swagger UI runs inside the browser, and browsers enforce CSP headers like: Content-Security-Policy: default-src 'self
+      - This means: Only it can load/connect to things hosted on the same origin (i.e., https://url-shortener-service-a226.onrender.com)
+      - It will work on POSTMAN
+      - Also it works perfecty fine when the endpoint is being hit directly from a browser
